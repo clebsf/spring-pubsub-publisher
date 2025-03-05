@@ -18,9 +18,9 @@ public class MessageController {
 
 
     @PostMapping("/publish")
-    public String publishMessage(@RequestBody String message) {
-        pubSubTemplate.publish("spring-pubsub", message);
-        return "Message published: " + message;
+    public String publishMessage(@RequestBody String phase) {
+        pubSubTemplate.publish("spring-pubsub", phase);
+        return "Message published: " + phase;
     }
 
 }
